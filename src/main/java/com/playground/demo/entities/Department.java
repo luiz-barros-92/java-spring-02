@@ -1,9 +1,13 @@
 package com.playground.demo.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -14,6 +18,9 @@ public class Department {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
+	
+	@OneToMany(mappedBy = "department")
+	private List<Product> products = new ArrayList<Product>();
 	
 	public Department() {		
 	}
@@ -37,5 +44,9 @@ public class Department {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public List<Product> getProducts() {
+		return products;
 	}	
 }
