@@ -1,11 +1,20 @@
 INSERT INTO tb_department (name) VALUES ('Tech');
-INSERT INTO tb_department (name) VALUES ('Pet');
 INSERT INTO tb_department (name) VALUES ('Books');
 
-INSERT INTO tb_product (name, price, department_id) VALUES ('Macbook Pro', 4000.00, 1);
-INSERT INTO tb_product (name, price, department_id) VALUES ('PC Gamer', 5000.00, 1);
-INSERT INTO tb_product (name, price, department_id) VALUES ('Pet House', 300.00, 2);
-INSERT INTO tb_product (name, price, department_id) VALUES ('Samsung Monitor', 700.00, 1);
-INSERT INTO tb_product (name, price, department_id) VALUES ('Just For Fun - Torvalds', 50.00, 3);
-INSERT INTO tb_product (name, price, department_id) VALUES ('1984 - Orwell', 38.00, 3);
-INSERT INTO tb_product (name, price, department_id) VALUES ('Pet Food', 10.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Logitech Mouse', 50.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Razer Keyboard', 200.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('HP Printer', 300.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Just For Fun - Torvalds', 50.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('1984 - Orwell', 38.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('To Kill a Mockingbird - Harper Lee', 40.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('The Lord of the Rings - Tolkien', 60.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('The Hitchhiker''s Guide to the Galaxy - Douglas Adams', 30.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Pride and Prejudice - Jane Austen', 35.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('The Great Gatsby - F. Scott Fitzgerald', 45.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('iPhone 14', 3500.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Samsung Galaxy S22', 2800.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Asus Laptop', 2500.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('Dell Inspiron', 2200.00, 1);
+INSERT INTO tb_product (name, price, department_id) VALUES ('The Catcher in the Rye - J.D. Salinger', 25.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('The Picture of Dorian Gray - Oscar Wilde', 50.00, 2);
+INSERT INTO tb_product (name, price, department_id) VALUES ('War and Peace - Leo Tolstoy', 70.00, 2);
