@@ -1,6 +1,6 @@
 package com.playground.demo.dto;
 
-import com.playground.demo.entities.Product;
+import com.playground.demo.entities.Department;
 
 public class DepartmentDTO {
 
@@ -15,7 +15,7 @@ public class DepartmentDTO {
 		this.name = name;
 	}
 	
-	public DepartmentDTO(Product entity) {
+	public DepartmentDTO(Department entity) {
 		id = entity.getId();
 		name = entity.getName();
 	}

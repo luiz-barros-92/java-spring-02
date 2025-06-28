@@ -14,7 +14,7 @@ public class ProductDepartmentDTO {
 		this.price = price;
 		this.department = department;
 	}
-
+	
 	public Long getId() {
 		return id;
 	}
