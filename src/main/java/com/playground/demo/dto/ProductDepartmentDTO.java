@@ -1,5 +1,7 @@
 package com.playground.demo.dto;
 
+import com.playground.demo.entities.Product;
+
 public class ProductDepartmentDTO {
 
 	private Long id;
@@ -13,6 +15,13 @@ public class ProductDepartmentDTO {
 		this.name = name;
 		this.price = price;
 		this.department = department;
+	}
+	
+	public ProductDepartmentDTO(Product entity) {
+		id = entity.getId();
+		name = entity.getName();
+		price = entity.getPrice();
+		department = new DepartmentDTO(entity.getDepartment());
 	}
 	
 	public Long getId() {
