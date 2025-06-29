@@ -6,24 +6,20 @@ import org.springframework.stereotype.Service;
 import com.playground.demo.dto.ProductDepartmentDTO;
 import com.playground.demo.entities.Department;
 import com.playground.demo.entities.Product;
-import com.playground.demo.repositories.DepartmentRepository;
 import com.playground.demo.repositories.ProductRepository;
 
 @Service
 public class ProductService {
 
 	@Autowired
-	private ProductRepository repository;
-	
-	@Autowired
-	private DepartmentRepository departmentRepository;
+	private ProductRepository repository;	
 	
 	public ProductDepartmentDTO insert (ProductDepartmentDTO dto) {		
 		Product entity = new Product();
 		entity.setName(dto.getName());
 		entity.setPrice(dto.getPrice());
 		
-		Department department = departmentRepository.findById(dto.getDepartment().getId()).orElseThrow(() -> new RuntimeException("Department not found"));			
+		Department department = new Department();			
 		entity.setDepartment(department);
 		
 		entity = repository.save(entity);
