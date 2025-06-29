@@ -9,6 +9,9 @@ public class ProductDepartmentDTO {
 	private Double price;
 	
 	private DepartmentDTO department;
+	
+	public ProductDepartmentDTO() {
+	}
 
 	public ProductDepartmentDTO(Long id, String name, Double price, DepartmentDTO department) {
 		this.id = id;

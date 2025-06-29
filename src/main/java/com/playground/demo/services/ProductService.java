@@ -19,7 +19,8 @@ public class ProductService {
 		entity.setName(dto.getName());
 		entity.setPrice(dto.getPrice());
 		
-		Department department = new Department();			
+		Department department = new Department();
+		department.setId(dto.getDepartment().getId());
 		entity.setDepartment(department);
 		
 		entity = repository.save(entity);
