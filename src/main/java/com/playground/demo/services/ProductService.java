@@ -18,6 +18,7 @@ public class ProductService {
 	@Autowired
 	private ProductRepository repository;
 	
+	@Transactional(readOnly = true)
 	public List<ProductDTO> findAll() {
 		List<Product> result = repository.findAll();
 		List<ProductDTO> dto = result.stream().map(x -> new ProductDTO(x)).toList();
