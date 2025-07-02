@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.playground.demo.dto.ProductDTO;
-import com.playground.demo.dto.ProductDepartmentDTO;
 import com.playground.demo.entities.Department;
 import com.playground.demo.entities.Product;
 import com.playground.demo.repositories.ProductRepository;
@@ -26,14 +25,14 @@ public class ProductService {
 	}		
 	
 	@Transactional
-	public ProductDepartmentDTO insert (ProductDepartmentDTO dto) {		
+	public ProductDTO insert (ProductDTO dto) {
 		Product entity = new Product();
 		entity.setName(dto.getName());
 		entity.setPrice(dto.getPrice());		
 		Department department = new Department();
-		department.setId(dto.getDepartment().getId());
+		department.setId(dto.getDepartmentId());
 		entity.setDepartment(department);		
-		entity = repository.save(entity);		
-		return new ProductDepartmentDTO(entity);
+		entity = repository.save(entity);
+		return new ProductDTO(entity);
 	}
 }

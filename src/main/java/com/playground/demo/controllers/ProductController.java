@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.playground.demo.dto.ProductDTO;
-import com.playground.demo.dto.ProductDepartmentDTO;
 import com.playground.demo.services.ProductService;
 
 @RestController
@@ -25,12 +24,12 @@ public class ProductController {
 
 		@GetMapping
 		public List<ProductDTO> findAll() {
-			List<ProductDTO> list = service.findAll();			
+			List<ProductDTO> list = service.findAll();
 			return list;
 		}
 		
 		@PostMapping
-		public ResponseEntity<ProductDepartmentDTO> insert(@RequestBody ProductDepartmentDTO dto) {
+		public ResponseEntity<ProductDTO> insert(@RequestBody ProductDTO dto) {
 			dto = service.insert(dto);
 			URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(dto.getId()).toUri();
 			return ResponseEntity.created(uri).body(dto);
