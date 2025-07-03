@@ -1,3 +1,9 @@
+INSERT INTO tb_category (name) VALUES ('Adventure');
+INSERT INTO tb_category (name) VALUES ('Drama');
+INSERT INTO tb_category (name) VALUES ('Smartphones');
+INSERT INTO tb_category (name) VALUES ('Pc');
+INSERT INTO tb_category (name) VALUES ('Printers');
+
 INSERT INTO tb_department (name) VALUES ('Tech');
 INSERT INTO tb_department (name) VALUES ('Books');
 
@@ -18,3 +24,21 @@ INSERT INTO tb_product (name, price, department_id) VALUES ('Dell Inspiron', 220
 INSERT INTO tb_product (name, price, department_id) VALUES ('The Catcher in the Rye - J.D. Salinger', 25.00, 2);
 INSERT INTO tb_product (name, price, department_id) VALUES ('The Picture of Dorian Gray - Oscar Wilde', 50.00, 2);
 INSERT INTO tb_product (name, price, department_id) VALUES ('War and Peace - Leo Tolstoy', 70.00, 2);
+
+INSERT INTO tb_product_category (product_id, category_id) VALUES (1, 4);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (2, 4);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (3, 5);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (4, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (5, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (6, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (7, 1);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (8, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (9, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (10, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (11, 3);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (12, 3);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (13, 4);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (14, 4);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (15, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (16, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES (17, 2);
