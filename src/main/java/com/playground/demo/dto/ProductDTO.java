@@ -1,5 +1,9 @@
 package com.playground.demo.dto;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import com.playground.demo.entities.Category;
 import com.playground.demo.entities.Product;
 
 public class ProductDTO {
@@ -8,6 +12,8 @@ public class ProductDTO {
 	private String name;
 	private Double price;
 	private Long departmentId;
+	
+	private List<CategoryDTO> categories = new ArrayList<>();
 	
 	public ProductDTO() {
 	}
@@ -24,6 +30,9 @@ public class ProductDTO {
 		name = entity.getName();
 		price = entity.getPrice();
 		departmentId = entity.getDepartment().getId();
+		for (Category cat : entity.getCategories()) {
+			categories.add(new CategoryDTO(cat));
+		}
 	}
 
 	public Long getId() {
@@ -41,4 +50,8 @@ public class ProductDTO {
 	public Long getDepartmentId() {
 		return departmentId;
 	}
+
+	public List<CategoryDTO> getCategories() {
+		return categories;
+	}	
 }
